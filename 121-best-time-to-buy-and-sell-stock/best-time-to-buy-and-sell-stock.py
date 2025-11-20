@@ -2,7 +2,7 @@ class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         if sorted(prices , reverse=True) ==prices:
             return 0
-        buy =float("inf")
+        buy =prices[0]
         profit = float("-inf")
         for i in range(1, len(prices)):
             if buy > prices[i-1]:
