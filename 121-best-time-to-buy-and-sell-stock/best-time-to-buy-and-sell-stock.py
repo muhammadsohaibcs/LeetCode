@@ -7,7 +7,8 @@ class Solution:
         for i in range(1, len(prices)):
             if buy > prices[i-1]:
                 buy = prices [i-1]
-            profit =max(profit , prices[i]- buy)
+            if profit < prices[i]- buy:
+                profit = prices[i]- buy
         return profit
 
 
