@@ -8,8 +8,9 @@ class MinStack:
         if len(self.arr) ==0:
             self.arr.append((value , value))
         else:
-            if self.arr[-1][-1] < value:
-                self.arr.append((value , self.arr[-1][-1]))
+            prev = self.arr[-1][-1] 
+            if prev < value:
+                self.arr.append((value , prev))
             else:
                 self.arr.append((value ,value))
 
