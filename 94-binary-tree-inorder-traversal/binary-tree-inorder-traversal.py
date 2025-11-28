@@ -5,10 +5,10 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def inorderTraversal(self, root, ans = []) -> List[int]:
+    def inorderTraversal(self, root) -> List[int]:
         if not root:
             return []
         return (
-        self.inorderTraversal( root.left, ans)+ [root.val] + self.inorderTraversal( root.right , ans)
+        self.inorderTraversal( root.left)+ [root.val] + self.inorderTraversal( root.right)
         )
         
