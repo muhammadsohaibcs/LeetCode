@@ -1,6 +1,6 @@
 class Solution:
     def findMissingAndRepeatedValues(self, grid: List[List[int]]) -> List[int]:
-        List = range(1,len(grid)**2+1)
+        List = range(1,len(grid) * len(grid)+1)
         arr = []
         for i in grid:
             arr += i
