@@ -6,11 +6,12 @@
 #         self.right = right
 from functools import lru_cache
 
-@lru_cache(None)
+
 class Solution:
     def isBalanced(self, root: Optional[TreeNode]) -> bool:
             if not root:
                 return True
+            @lru_cache(None)
             def height(root):
                 if not root:
                     return 0
