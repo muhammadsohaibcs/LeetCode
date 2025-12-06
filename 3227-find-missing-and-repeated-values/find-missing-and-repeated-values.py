@@ -8,10 +8,11 @@ class Solution:
         missing = None
 
         for i in List:
+            if repeating and missing:
+                break
             if arr.count(i) == 2:
                 repeating = i
             elif arr.count(i) == 0:
                 missing = i
-            if repeating and missing:
-                break
+            
         return [repeating, missing]
