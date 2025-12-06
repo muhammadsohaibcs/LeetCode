@@ -14,5 +14,6 @@ class Solution:
                 return max(1+height(root.left) ,1+ height(root.right) )
             lheight = height(root.left)
             rheight = height(root.right)
-            return lheight-rheight in [-1,0,1] and self.isBalanced(root.left) and self.isBalanced(root.right)
+            result = lheight-rheight in [-1,0,1]
+            return  result and self.isBalanced(root.left) and self.isBalanced(root.right)
 
